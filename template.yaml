@@ -18,5 +18,5 @@ Resources:
         ScheduledFunction:
           Type: Schedule
           Properties:
-            Schedule: cron(15 10 * * ? *) # executa todo dia às 10:15
+            Schedule: cron(45 17 * * ? *) # executa todo dia às 10:15
             Name: dataops-agenda-coleta-vacina
