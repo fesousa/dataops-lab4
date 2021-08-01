@@ -13,3 +13,9 @@ Resources:
       MemorySize: 128
       Timeout: 600
       Role: !Sub arn:aws:iam::${AWS::AccountId}:role/LabRole
+      Events:
+        ScheduledFunction:
+          Type: Schedule
+          Properties:
+            Schedule: cron(15 10 * * ? *)
+            Name: dataops-agenda-coleta-vacina
