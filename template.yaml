@@ -2,20 +2,21 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: A starter AWS Lambda function.
 Resources:
+  # Criar função lambda agendada
   lambdafunction:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: dataops-coleta-vacinas-ci-cd
-      Handler: lambda_function.lambda_handler
-      Runtime: python3.7
-      CodeUri: ./app
+      FunctionName: dataops-coleta-vacinas-ci-cd # nome da função
+      Handler: lambda_function.lambda_handler # nome do arquivo e método de onde está a função
+      Runtime: python3.7 # ambiente de execução
+      CodeUri: ./app # local onde estarão os arquivos da função
       Description: Coletar dados de vacinas.
-      MemorySize: 128
-      Timeout: 600
-      Role: !Sub arn:aws:iam::${AWS::AccountId}:role/LabRole
-      Events:
+      MemorySize: 128 # memória utilizada pela funçãop
+      Timeout: 600 # tempo máximo de execução, em segundos
+      Role: !Sub arn:aws:iam::${AWS::AccountId}:role/LabRole # IAM role da função para permissões a outros recursos da AWS
+      Events: # Evento agendado para execução
         ScheduledFunction:
           Type: Schedule
           Properties:
-            Schedule: cron(15 10 * * ? *)
+            Schedule: cron(15 10 * * ? *) # executa todo dia às 10:15
             Name: dataops-agenda-coleta-vacina
