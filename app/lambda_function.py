@@ -17,7 +17,7 @@ def lambda_handler(event, context):
     # copiar para S3
     s3_client = boto3.client('s3')
     try:
-        response = s3_client.upload_file(local_filename, 'dataops-impacta-dados-fernandosousa', 'vacinas_{event["uf"]}.csv')
+        response = s3_client.upload_file(local_filename, 'dataops-impacta-dados-fernandosousa', f'vacinas_{event["uf"]}.csv')
     except Exception as e:
         print(e)
         return False
