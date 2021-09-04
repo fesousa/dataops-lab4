@@ -23,7 +23,7 @@ def lambda_handler(event, context):
         r.raise_for_status()
         #with open(local_filename, 'wb') as f:
         i = 1
-        for chunk in r.iter_content(chunk_size=10485760):
+        for chunk in r.iter_content(chunk_size=20971520):
             # upload de parte do arquivo
             print(f'Upload {i}')
             parts.append(s3_client.upload_part(Bucket=bucket
