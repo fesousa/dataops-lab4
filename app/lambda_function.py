@@ -5,8 +5,8 @@ import boto3
 def lambda_handler(event, context):
 
     #download do arquivo
-    local_filename = '/tmp/vacinas.csv'
-    url = "https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/vacina/uf/2021-07-22/uf%3DAC/part-00000-02e8fcac-58d6-488c-abda-dc607278e619.c000.csv"
+    local_filename = f'/tmp/vacinas_{event["uf"]}.csv'
+    url = event['url']
 
     with requests.get(url, stream=True) as r:
         r.raise_for_status()
@@ -17,7 +17,7 @@ def lambda_handler(event, context):
     # copiar para S3
     s3_client = boto3.client('s3')
     try:
-        response = s3_client.upload_file(local_filename, "dataops-impacta-dados-fernandosousa", "vacinas.csv")
+        response = s3_client.upload_file(local_filename, 'dataops-impacta-dados-fernandosousa', 'vacinas_{event["uf"]}.csv')
     except Exception as e:
         print(e)
         return False
