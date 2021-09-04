@@ -28,7 +28,7 @@ def lambda_handler(event, context):
             print(f'Upload {i}')
             parts.append(s3_client.upload_part(Bucket=bucket
                        , Key=key
-                       , PartNumber=1
+                       , PartNumber=i
                        , UploadId=mpu['UploadId']
                        , Body=chunk))
             
