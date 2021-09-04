@@ -12,7 +12,7 @@ Resources:
       CodeUri: ./app # local onde estarão os arquivos da função
       Description: Coletar dados de vacinas.
       MemorySize: 128 # memória utilizada pela funçãop
-      Timeout: 600 # tempo máximo de execução, em segundos
+      Timeout: 900 # tempo máximo de execução, em segundos
       Role: !Sub arn:aws:iam::${AWS::AccountId}:role/LabRole # IAM role da função para permissões a outros recursos da AWS
       Events: # Evento agendado para execução
         ScheduledFunction:
