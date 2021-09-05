@@ -11,7 +11,7 @@ Resources:
       Runtime: python3.7 # ambiente de execução
       CodeUri: ./app # local onde estarão os arquivos da função
       Description: Coletar dados de vacinas.
-      MemorySize: 128 # memória utilizada pela funçãop
+      MemorySize: 512 # memória utilizada pela funçãop
       Timeout: 900 # tempo máximo de execução, em segundos
       Role: !Sub arn:aws:iam::${AWS::AccountId}:role/LabRole # IAM role da função para permissões a outros recursos da AWS
       Events: # Evento agendado para execução
