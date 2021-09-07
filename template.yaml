@@ -23,4 +23,4 @@ Resources:
             Input: '{
               "url":"https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/vacina/uf/2021-09-03/uf%3DAC/part-00000-55f3db2e-ec9a-4125-9044-11b088159962.c000.csv", 
               "uf":"ac"
-            }'
+            }' # evento com parâmetros que serão enviados para a função lambda
