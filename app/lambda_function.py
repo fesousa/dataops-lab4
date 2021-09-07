@@ -6,7 +6,7 @@ async def upload_s3_async(init, end, i, url, bucket, key, s3, mpu):
     r = requests.get(url,  headers={'Range':f'bytes={init}-{end}'})    
     #upload para o S3
     r.encoding = "utf-8"
-    return s3.upload_part(Bucket=bucket, Key=key, PartNumber=i, UploadId=mpu['UploadId'], Body=r.text.decode("utf-8"))
+    return s3.upload_part(Bucket=bucket, Key=key, PartNumber=i, UploadId=mpu['UploadId'], Body=r.text.encode("utf-8"))
 
 async def upload_s3(url, bucket, key, s3, mpu):
     # separar arquivo em pedaços de 50 MB
