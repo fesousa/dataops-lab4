@@ -25,9 +25,9 @@ def lambda_handler(event, context):
     # url que virá pelo parâmetro
     url = event['url']
     # nome do bucket para upload
-    bucket = 'dataops-impacta-dados-profernandosousa'
+    bucket = 'dataops-impacta-dados-fernandosousa'
     #nome do arquivo que será salvo no bucket
-    key = f'vacinas_{event["uf"]}.csv'
+    key = f'input/vacinas_{event["uf"]}.csv'
     #Concexão com s3
     s3 = boto3.client('s3')
     # iniciar upload multipart
