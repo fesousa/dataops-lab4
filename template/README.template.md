@@ -72,11 +72,11 @@ ${app/lambda_function.py}
 
     4.6.	Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem14.png" height='25'/>  coloque 512 MB
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem15.png" height='150'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem15.png" height='80'/>
  
     4.7.	Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem16.png" height='25'/> coloque 15 minutos
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem17.png" height='150'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem17.png" height='80'/>
  
     4.8.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem18.png" height='25'/>
 
