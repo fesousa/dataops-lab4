@@ -121,7 +121,7 @@ def lambda_handler(event, context):
  
     4.7.	Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem16.png" height='25'/> coloque 15 minutos
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem17.png" height='80'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem17.png" height='70'/>
  
     4.8.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem18.png" height='25'/>
 
@@ -140,18 +140,18 @@ def lambda_handler(event, context):
 
     O evento de teste ficará assim:
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem20.png" height='150'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem20.png" height='500'/>
 
 
     5.3.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem21.png" height='25'/>
 
     5.4.	Espera a função terminar de executar
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem22.png" height='80'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem22.png" height='75'/>
  
     5.5.	Expanda <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem23.png" height='25'/> para ver os resultados. Você deve ver a mensagem true na área branca. Se não vir, verifique o log mais abaixo e verifique o nome do bucket
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem24.png" height='50'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem24.png" height='150'/>
  
     5.6.	Abra o seu bucket de dados (`dataops-impacta-dados-nomesobrenome`, ou o nome criado no  <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a>) e verifique o arquivo baixado
 
@@ -161,5 +161,5 @@ def lambda_handler(event, context):
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-06 23:47:17
+Last update: 2022-03-06 23:49:17
 </div>
