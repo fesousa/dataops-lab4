@@ -25,7 +25,7 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 
 2.	Coloque o seguinte código  no arquivo
 
-  Este código faz o download do arquivo de vacinação no AC disponível em [aqui](https://dados.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8){:target="_blank"} e copie para o bucket criado no [Laboratório 1](https://github.com/fesousa/dataops-lab1){:target="_blank"} (nome sugerido foi `dataops-dados-nomesobrenome`, sendo que `nomesobrenome` deve ser seu nome e sobrenome; ou entáo coloque o nome do bucker que criou no  [Laboratório 1](https://github.com/fesousa/dataops-lab1){:target="_blank"}, se for diferente)
+  Este código faz o download do arquivo de vacinação no AC disponível em [aqui](https://dados.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8){:target="_blank"} e copie para o bucket criado no [Laboratório 1](https://github.com/fesousa/dataops-lab1){:target="_blank"} (nome sugerido foi `dataops-dados-nomesobrenome`, sendo que `nomesobrenome` deve ser seu nome e sobrenome; ou entáo coloque o nome do bucker que criou no  [Laboratório 1](https://github.com/fesousa/dataops-lab1){:target="_blank" rel="noopener"}, se for diferente)
 
 
 ```python
