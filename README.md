@@ -104,7 +104,32 @@ def lambda_handler(event, context):
     4.1.	Na seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem8.png" height='25'/> remova o conteúdo do arquivo que está aberto e cole o código do arquivo [`lambda_function.py`](https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py) criado no VSCode.
 
 
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem9.png" width='100%'/>
 
+
+    4.2.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem10.png" height='25'/>
+
+    4.3.	Selecione a aba <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem11.png" height='25'/>
+
+    4.4.	Nas opções da esquerda, selecione <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem12.png" height='25'/>
+
+    4.5.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem13.png" height='25'/> para alterar o tempo máximo de execução da função e a quantidade de memória
+
+    4.6.	Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem14.png" height='25'/>  coloque 512 MB
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem15.png" height='150'/>
+ 
+    4.7.	Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem16.png" height='25'/> coloque 15 minutos
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem17.png" height='150'/>
+ 
+    4.8.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem18.png" height='25'/>
+
+5.	Testar a função
+
+    5.1.	Selecione a aba <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem19.png" height='25'/>
+
+    5.2.	Na caixa de texto onde está JSON, troque pelo seguinte, para coletar os dados de vacina do Acre:
 
 
 
@@ -112,5 +137,5 @@ def lambda_handler(event, context):
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-06 23:14:04
+Last update: 2022-03-06 23:18:15
 </div>
