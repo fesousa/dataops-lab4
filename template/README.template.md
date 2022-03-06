@@ -84,7 +84,14 @@ ${app/lambda_function.py}
 
     5.1.	Selecione a aba <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem19.png" height='25'/>
 
-    5.2.	Na caixa de texto onde está JSON, troque pelo seguinte, para coletar os dados de vacina do Acre:
+    5.2.	Na caixa de texto onde está a string JSON, troque pelo seguinte, para coletar os dados de vacina do Acre:
+
+    ```json
+    {
+      "url":"https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/vacina/uf/2021-09-03/uf%3DAC/part-00000-55f3db2e-ec9a-4125-9044-11b088159962.c000.csv", 
+      "uf":"ac"
+    }
+    ```
 
 
 
