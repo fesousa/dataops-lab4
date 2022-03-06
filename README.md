@@ -25,7 +25,7 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 
 2.	Coloque o seguinte código  no arquivo
 
-  Este código faz o download do arquivo de vacinação no AC disponível em [aqui](https://dados.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8) e copie para o bucket criado no [Laboratório 1](https://github.com/fesousa/dataops-lab1) (nome sugerido foi `dataops-dados-nomesobrenome`, sendo que `nomesobrenome` deve ser seu nome e sobrenome; ou entáo coloque o nome do bucker que criou no  [Laboratório 1](https://github.com/fesousa/dataops-lab1), se for diferente)
+  Este código faz o download do arquivo de vacinação no AC disponível em [aqui](https://dados.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8){:target="_blank"} e copie para o bucket criado no [Laboratório 1](https://github.com/fesousa/dataops-lab1){:target="_blank"} (nome sugerido foi `dataops-dados-nomesobrenome`, sendo que `nomesobrenome` deve ser seu nome e sobrenome; ou entáo coloque o nome do bucker que criou no  [Laboratório 1](https://github.com/fesousa/dataops-lab1){:target="_blank"}, se for diferente)
 
 
 ```python
@@ -101,7 +101,7 @@ def lambda_handler(event, context):
 
 4.	Você será redirecionado para a tela da função criada. Agora é preciso configurá-la
 
-    4.1.	Na seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem8.png" height='25'/> remova o conteúdo do arquivo que está aberto e cole o código do arquivo [`lambda_function.py`](https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py) criado no VSCode.
+    4.1.	Na seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem8.png" height='25'/> remova o conteúdo do arquivo que está aberto e cole o código do arquivo [`lambda_function.py`](https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py){:target="_blank"} criado no VSCode.
 
 
     <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem9.png" width='100%'/>
@@ -138,11 +138,28 @@ def lambda_handler(event, context):
     }
     ```
 
+    O evento de teste ficará assim:
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem20.png" height='80'/>
+
+
+    5.3.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem21.png" height='25'/>
+
+    5.4.	Espera a função terminar de executar
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem22.png" height='50'/>
+ 
+    5.5.	Expanda <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem22.png" height='25'/> para ver os resultados. Você deve ver a mensagem true na área branca. Se não vir, verifique o log mais abaixo e verifique o nome do bucket
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem22.png" height='50'/>
+ 
+    5.6.	Abra o seu bucket de dados (`dataops-impacta-dados-nomesobrenome`, ou o nome criado no  [Laboratório 1](https://github.com/fesousa/dataops-lab1){:target="_blank"}) e verifique o arquivo baixado
+
 
 
 <div class="footer">
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-06 23:23:54
+Last update: 2022-03-06 23:28:09
 </div>
