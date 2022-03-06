@@ -140,7 +140,7 @@ def lambda_handler(event, context):
 
     O evento de teste ficará assim:
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem20.png" height='500'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem20.png" height='200'/>
 
 
     5.3.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem21.png" height='25'/>
@@ -151,7 +151,7 @@ def lambda_handler(event, context):
  
     5.5.	Expanda <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem23.png" height='25'/> para ver os resultados. Você deve ver a mensagem true na área branca. Se não vir, verifique o log mais abaixo e verifique o nome do bucket
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem24.png" height='150'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem24.png" height='400'/>
  
     5.6.	Abra o seu bucket de dados (`dataops-impacta-dados-nomesobrenome`, ou o nome criado no  <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a>) e verifique o arquivo baixado
 
@@ -161,5 +161,5 @@ def lambda_handler(event, context):
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-06 23:49:17
+Last update: 2022-03-06 23:50:55
 </div>
