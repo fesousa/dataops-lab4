@@ -8,7 +8,7 @@ Resources:
     Properties:
       FunctionName: dataops-coleta-vacinas-ci-cd # nome da função
       Handler: lambda_function.lambda_handler # nome do arquivo e método de onde está a função
-      Runtime: python3.7 # ambiente de execução
+      Runtime: python3.9 # ambiente de execução
       CodeUri: ./app # local onde estarão os arquivos da função
       Description: Coletar dados de vacinas.
       MemorySize: 512 # memória utilizada pela funçãop
@@ -18,7 +18,7 @@ Resources:
         ScheduledFunction:
           Type: Schedule
           Properties:
-            Schedule: cron(10 23 * * ? *) # executa todo dia às 10:15
+            Schedule: cron(15 00 * * ? *) # executa todo dia às 10:15
             Name: dataops-agenda-coleta-vacina
             Input: '{
               "url":"https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/vacina/uf/2021-09-03/uf%3DAC/part-00000-55f3db2e-ec9a-4125-9044-11b088159962.c000.csv", 
