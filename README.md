@@ -156,10 +156,21 @@ def lambda_handler(event, context):
     5.6.	Abra o seu bucket de dados (`dataops-impacta-dados-nomesobrenome`, ou o nome criado no  <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a>) e verifique o arquivo baixado
 
 
+## Configurar Jenkins para fazer CI/CD da função lambda
+
+1. Inicie seu ambiente da AWS como fez nos laboratórios anteriores
+
+2. Ainda na tela do laboratório no AWS Academy, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem25.png" height='25'/>
+
+3.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem26.png" height='25'/> para baixar a chave SSH para acessar as instâncias EC2
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem27.png" height='250'/>
+
+
 
 <div class="footer">
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-06 23:50:55
+Last update: 2022-03-06 23:52:33
 </div>
