@@ -25,7 +25,7 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 
 2.	Coloque o seguinte código  no arquivo
 
-  Este código faz o download do arquivo de vacinação no AC disponível em [aqui](https://dados.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8){:target="_blank"} e copie para o bucket criado no [Laboratório 1](https://github.com/fesousa/dataops-lab1){:target="_blank"} (nome sugerido foi `dataops-dados-nomesobrenome`, sendo que `nomesobrenome` deve ser seu nome e sobrenome; ou entáo coloque o nome do bucker que criou no  [Laboratório 1](https://github.com/fesousa/dataops-lab1){:target="_blank" rel="noopener"}, se for diferente)
+  Este código faz o download do arquivo de vacinação no AC disponível <a href="https://dados.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8" target="_blank"> aqui </a> e copie para o bucket criado no <a href="https://github.com/fesousa/dataops-lab1" target="_blank"> Laboratório 1 </a> (nome sugerido foi `dataops-dados-nomesobrenome`, sendo que `nomesobrenome` deve ser seu nome e sobrenome; ou entáo coloque o nome do bucker que criou no  <a href="https://github.com/fesousa/dataops-lab1" target="_blank"> Laboratório 1 </a>, se for diferente)
 
 
 ```python
@@ -101,7 +101,7 @@ def lambda_handler(event, context):
 
 4.	Você será redirecionado para a tela da função criada. Agora é preciso configurá-la
 
-    4.1.	Na seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem8.png" height='25'/> remova o conteúdo do arquivo que está aberto e cole o código do arquivo [`lambda_function.py`](https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py){:target="_blank"} criado no VSCode.
+    4.1.	Na seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem8.png" height='25'/> remova o conteúdo do arquivo que está aberto e cole o código do arquivo <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a> criado no VSCode.
 
 
     <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem9.png" width='100%'/>
@@ -153,7 +153,7 @@ def lambda_handler(event, context):
 
     <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem24.png" height='50'/>
  
-    5.6.	Abra o seu bucket de dados (`dataops-impacta-dados-nomesobrenome`, ou o nome criado no  [Laboratório 1](https://github.com/fesousa/dataops-lab1){:target="_blank"}) e verifique o arquivo baixado
+    5.6.	Abra o seu bucket de dados (`dataops-impacta-dados-nomesobrenome`, ou o nome criado no  <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a>) e verifique o arquivo baixado
 
 
 
@@ -161,5 +161,5 @@ def lambda_handler(event, context):
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-06 23:40:25
+Last update: 2022-03-06 23:47:17
 </div>
