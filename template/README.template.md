@@ -115,12 +115,21 @@ ${app/lambda_function.py}
 
 1. Inicie seu ambiente da AWS como fez nos laboratórios anteriores
 
-2. Ainda na tela do laboratório no AWS Academy, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem25.png" height='25'/>
+2. Ainda na tela do laboratório no AWS Academy, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem105.png" height='25'/>
 
-3.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem26.png" height='25'/> para baixar a chave SSH para acessar as instâncias EC2
+3.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem25.png" height='25'/> para baixar a chave SSH para acessar as instâncias EC2
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem26.png" height='250'/>
+
+4.	Acesse o console da AWS
+
+5.	Verifique se a instância EC2 criada na aula passada está ligada. Se não, inicie a instância. A instância deve ficar parecida com a imagem abaixo:
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem27.png" height='250'/>
 
+6.	Na barra superior, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem28.png" height='25'/>  para abrir um console de linha de comando do AWS CloudShell e espere iniciar
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem29.png" height='25'/> 
 
 
 <div class="footer">
