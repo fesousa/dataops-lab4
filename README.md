@@ -85,7 +85,7 @@ def lambda_handler(event, context):
 
     3.3.	Na próxima tela, preencha os seguintes campos:
 
-        a.	Nome da função: `dataops-coleta-vacinas`
+      a.	Nome da função: `dataops-coleta-vacinas`
     
         ii.	Tempo de execução: `Python 3.7`
 
@@ -112,5 +112,5 @@ def lambda_handler(event, context):
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-06 23:09:21
+Last update: 2022-03-06 23:10:29
 </div>
