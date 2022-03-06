@@ -40,7 +40,7 @@ ${app/lambda_function.py}
 
     3.3.	Na próxima tela, preencha os seguintes campos:
 
-        a.	Nome da função: `dataops-coleta-vacinas`
+      a.	Nome da função: `dataops-coleta-vacinas`
     
         ii.	Tempo de execução: `Python 3.7`
 
