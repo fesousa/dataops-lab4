@@ -170,16 +170,33 @@ def lambda_handler(event, context):
 
 5.	Verifique se a instância EC2 criada na no [Laboratório 3](https://github.com/fesousa/dataops-lab3) está ligada. Se não, inicie a instância. A instância deve ficar parecida com a imagem abaixo:
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem27.png" height='150'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem27.png" height='120'/>
 
 6.	Na barra superior, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem28.png" height='25'/>  para abrir um console de linha de comando do AWS CloudShell e espere iniciar
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem29.png" height='150'/> 
+
+7.	Faça o upload da chave SSH que acabou de baixar (labsuser.pem) para o CloudShell
+
+    7.1.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem30.png" height='25'/>
+
+    7.2.	Selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem31.png" height='25'/>
+
+    7.3.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem32.png" height='25'/>
+
+    7.4.	Procure o arquivo `labsuser.pem` que baixou
+
+    7.5.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem33.png" height='25'/>
+
+    7.6.	Espere o arquivo ser carregado. Aparecerá a seguinte mensagem no canto superior direito
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem28.png" height='150'/>
+
 
 
 <div class="footer">
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-06 23:56:17
+Last update: 2022-03-06 23:58:18
 </div>
