@@ -40,19 +40,19 @@ ${app/lambda_function.py}
 
     3.3.	Na próxima tela, preencha os seguintes campos:
 
-      a.	Nome da função: `dataops-coleta-vacinas`
+    &nbsp;&nbsp;&nbsp;&nbsp;a.	Nome da função: `dataops-coleta-vacinas`
     
-        ii.	Tempo de execução: `Python 3.7`
+    &nbsp;&nbsp;&nbsp;&nbsp;b.	Tempo de execução: `Python 3.7`
 
-    iii.	Abra a seção  <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem3.png" height='25'/>
+    &nbsp;&nbsp;&nbsp;&nbsp;iii.	Abra a seção  <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem3.png" height='25'/>
 
-    iv.	Selecione <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem4.png" height='25'/>
+    &nbsp;&nbsp;&nbsp;&nbsp;iv.	Selecione <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem4.png" height='25'/>
 
-    v.	Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem5.png" height='25'/> selecione <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem6.png" height='25'/>
+    &nbsp;&nbsp;&nbsp;&nbsp;v.	Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem5.png" height='25'/> selecione <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem6.png" height='25'/>
 
-    O lambda precisa de permissão para usar o S3. A função (IAM Role) selecionado da essa permissão
+    &nbsp;&nbsp;&nbsp;&nbsp;O lambda precisa de permissão para usar o S3. A função (IAM Role) selecionado da essa permissão
 
-    vi.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem7.png" height='25'/>
+    &nbsp;&nbsp;&nbsp;&nbsp;vi.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem7.png" height='25'/>
 
 4.	Você será redirecionado para a tela da função criada. Agora é preciso configurá-la
 
