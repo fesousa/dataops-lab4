@@ -16,7 +16,7 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 
 ## Arquitetura da solução
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem1.png" height='450'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem1.png" height='550'/>
 
 
 ## Função Lambda para coletar dados
