@@ -34,15 +34,15 @@ ${app/lambda_function.py}
 
 3.	Criar função Lambda no Console AWS
 
-  3.1.	No console da AWS procure pelo serviço `Lambda`
+    3.1.	No console da AWS procure pelo serviço `Lambda`
 
-  3.2.	Na tela do serviço, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem2.png" height='25'/>
+    3.2.	Na tela do serviço, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem2.png" height='25'/>
 
-  3.3.	Na próxima tela, preencha os seguintes campos:
+    3.3.	Na próxima tela, preencha os seguintes campos:
 
-    a.	Nome da função: `dataops-coleta-vacinas`
+        a.	Nome da função: `dataops-coleta-vacinas`
     
-    ii.	Tempo de execução: `Python 3.7`
+        ii.	Tempo de execução: `Python 3.7`
 
     iii.	Abra a seção  <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem3.png" height='25'/>
 
