@@ -195,7 +195,7 @@ chmod 400 labsuser.pem
 
 Essa é a senha do administrador. Quando acessar o Jenkins novamente, será solicitado o usuário e senha. Utilize o usuário “admin” e a senha que acabou de copiar
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem42.png" height='300'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem42.png" height='350'/>
 
 
 
