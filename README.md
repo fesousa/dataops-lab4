@@ -174,7 +174,7 @@ def lambda_handler(event, context):
 
 6.	Na barra superior, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem28.png" height='25'/>  para abrir um console de linha de comando do AWS CloudShell e espere iniciar
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem29.png" height='150'/> 
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem29.png" height='200'/> 
 
 7.	Faça o upload da chave SSH que acabou de baixar (labsuser.pem) para o CloudShell
 
@@ -190,7 +190,17 @@ def lambda_handler(event, context):
 
     7.6.	Espere o arquivo ser carregado. Aparecerá a seguinte mensagem no canto superior direito
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem28.png" height='150'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem34.png" height='150'/>
+
+    7.7.	No terminal do CloudShell digite `ls` e verifique a presença do arquivo
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem35.png" height='150'/>
+ 
+8.	Ainda no terminal, digite o seguinte comando para mudar a permissão de acesso à chave SSH:
+
+```bash
+chmod 400 labsuser.pem
+```
 
 
 
@@ -198,5 +208,5 @@ def lambda_handler(event, context):
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-06 23:58:18
+Last update: 2022-03-07 00:00:14
 </div>
