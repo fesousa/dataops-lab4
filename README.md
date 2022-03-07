@@ -174,9 +174,9 @@ def lambda_handler(event, context):
 
 6.	Na barra superior, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem28.png" height='25'/>  para abrir um console de linha de comando do AWS CloudShell e espere iniciar
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem29.png" height='300'/> 
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem29.png" height='350'/> 
 
-7.	Faça o upload da chave SSH que acabou de baixar (labsuser.pem) para o CloudShell
+7.	Faça o upload da chave SSH que acabou de baixar (`labsuser.pem`) para o CloudShell
 
     7.1.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem30.png" height='25'/>
 
@@ -228,5 +228,5 @@ chmod 400 labsuser.pem
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-07 00:03:42
+Last update: 2022-03-07 00:05:34
 </div>
