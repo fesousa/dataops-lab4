@@ -222,11 +222,31 @@ chmod 400 labsuser.pem
 
     <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem39.png" height='300'/>
 
+10.	Conectado na instância, precisamos recuperar a senha de administrador do Jenkins
+
+    10.1.	Na linha de comando digite:
+    
+    ```bash
+    sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+    ```
+
+    10.2.	Copie e guarde o valor alfanumérico que aparecer no terminal
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem40.png" height='300'/>
+
+11.	Em uma nova aba do navegador, acesse o Jenkins escrevendo `<IP-INSTANCIA>:8080`. Por exemplo: `12.345.6.789:800`. O IP é o mesmo utilizado para conectar na instância pelo terminal
+
+12.	Coloque a senha do administrador no campo de texto e clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem41.png" height='25'/>
+
+Essa é a senha do administrador. Quando acessar o Jenkins novamente, será solicitado o usuário e senha. Utilize o usuário “admin” e a senha que acabou de copiar
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem42.png" height='300'/>
+
 
 
 <div class="footer">
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-07 00:05:34
+Last update: 2022-03-07 00:08:13
 </div>
