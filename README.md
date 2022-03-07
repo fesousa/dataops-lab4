@@ -242,11 +242,39 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem42.png" height='350'/>
 
+13.	Feche de customização do Jenkins e clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem43.png" height='25'/>
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem44.png" height='350'/>
+
+
+14.	Instalar o plugin do CodePipeline
+
+    14.1.	Na página inicial do Jenkins clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem45.png" height='25'/>
+
+    14.2.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem46.png" height='25'/>
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem47.png" height='200'/>
+ 
+    14.3.	Clique na aba <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem48.png" height='25'/>
+
+    14.4.	No campo de busca acima das abas, procure por CodePipeline
+
+    14.5.	Clique no checkbox do registro encontrado
+
+    14.6.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem49.png" height='25'/>
+
+    14.7.	No final da nova tela, selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem50.png" height='25'/>
+
+    14.8.	Aguarde o Jenkins reiniciar
+
+    14.9.	Quando a tela de login abrir novamente, coloque o usuário `admin` e a senha utilizada anteriormente
+
+
 
 
 <div class="footer">
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-07 00:09:23
+Last update: 2022-03-07 00:38:56
 </div>
