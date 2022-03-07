@@ -174,7 +174,7 @@ def lambda_handler(event, context):
 
 6.	Na barra superior, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem28.png" height='25'/>  para abrir um console de linha de comando do AWS CloudShell e espere iniciar
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem29.png" height='200'/> 
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem29.png" height='300'/> 
 
 7.	Faça o upload da chave SSH que acabou de baixar (labsuser.pem) para o CloudShell
 
@@ -194,7 +194,7 @@ def lambda_handler(event, context):
 
     7.7.	No terminal do CloudShell digite `ls` e verifique a presença do arquivo
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem35.png" height='150'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem35.png" height='300'/>
  
 8.	Ainda no terminal, digite o seguinte comando para mudar a permissão de acesso à chave SSH:
 
@@ -202,11 +202,31 @@ def lambda_handler(event, context):
 chmod 400 labsuser.pem
 ```
 
+9.	Acesse a instância EC2 do Jenkins pela linha de comando
+
+    9.1.	Volte ao console da AWS, no serviço do EC2
+
+    9.2.	Selecione a instância ec2-jenkins criada na aula anterior
+
+    9.3.	No painel inferior, em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem36.png" height='25'/> copie o <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem37.png" height='25'/> clicando em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem38.png" height='25'/>
+
+    9.4.	Volte à tela do AWS CloudShell e digite o seguinte comando para acessar a instância EC2. Troque `<IP-INSTANCIA>` pelo IP copiado no passo anterior
+
+    ```bash
+    ssh -i labsuser.pem ec2-user@<IP-INSTANCIA>
+    ```
+
+    9.5.	 Confirme a conexão digitando `yes`
+
+    9.6.	Se a conexão deu certo, você verá a linha de comando iniciando com `ec2-user`
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem39.png" height='300'/>
+
 
 
 <div class="footer">
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-07 00:00:14
+Last update: 2022-03-07 00:03:42
 </div>
