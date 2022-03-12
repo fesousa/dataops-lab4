@@ -264,12 +264,11 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 ${code/build.sh}
 ```
     
+   5.11. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem71.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem72.png" height='25'/> e escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem73.png" height='25'/>
 
-    5.11. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem71.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem72.png" height='25'/> e escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem73.png" height='25'/>
+   5.12. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem74.png" height='25'/>
 
-    5.12. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem74.png" height='25'/>
-
-    5.13. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem75.png" height='25'/>
+   5.13. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem75.png" height='25'/>
     
 
 
