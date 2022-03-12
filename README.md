@@ -274,15 +274,13 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 1.	Na página inicial do Jenkins clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem51.png" height='25'/>
 
 
-2.	No campo texto abaixo de <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem52.png" height='25'/> coloque o nome do processo:
-
-    2.1.	DataOpsImpactaDeployColeta
+2.	No campo texto abaixo de <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem52.png" height='25'/> coloque o nome do processo: `DataOpsImpactaDeployColeta`
 
 3.	Selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem53.png" height='25'/>
 
 4.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem54.png" height='25'/>
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem55.png" height='200'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem55.png" height='300'/>
 
  
 5.	Configure o processo:
@@ -297,7 +295,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
     5.5. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem61.png" height='25'/> escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem62.png" height='25'/>
 
-    5.6. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem63.png" height='25'/> coloque DeployColetaProvider
+    5.6. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem63.png" height='25'/> coloque `DeployColetaProvider`
 
     5.7. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem64.png" height='25'/> selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem65.png" height='25'/>
 
@@ -307,9 +305,22 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
     5.10. No campo de texto <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem70.png" height='25'/> coloque o seguinte script. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no <a href="https://github.com/fesousa/dataops-lab2" target="_blank"> Laboratório 2 </a>
 
-    ```bash
-    ${code/build.sh}
-    ```
+```bash
+#Define o caminho para o python
+PYENV_HOME=$WORKSPACE
+#Cria um venv na pasta
+python3 -m venv $PYENV_HOME
+#Ativa o venv
+. $PYENV_HOME/bin/activate
+#instala aws-sam-cli
+pip install aws-sam-cli
+#Construir pacote
+sam build
+#Cria o pacote para publicação da função lambda
+sam package --region us-east-1 --s3-bucket deploy-nomesobrenome-accountID-regiao
+#Publica a função lambda utilizando o bucket s3 e CloudFormation
+sam deploy --stack-name dataops-coleta-vacinas-stack --region us-east-1 --capabilities CAPABILITY_IAM --s3-bucket deploy-nomesobrenome-accountID-regiao
+```
   
     5.11. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem71.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem72.png" height='25'/> e escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem73.png" height='25'/>
 
@@ -323,5 +334,5 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-12 19:03:45
+Last update: 2022-03-12 19:06:56
 </div>
