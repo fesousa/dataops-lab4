@@ -322,12 +322,11 @@ sam package --region us-east-1 --s3-bucket deploy-nomesobrenome-accountID-regiao
 sam deploy --stack-name dataops-coleta-vacinas-stack --region us-east-1 --capabilities CAPABILITY_IAM --s3-bucket deploy-nomesobrenome-accountID-regiao
 ```
     
+   5.11. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem71.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem72.png" height='25'/> e escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem73.png" height='25'/>
 
-    5.11. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem71.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem72.png" height='25'/> e escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem73.png" height='25'/>
+   5.12. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem74.png" height='25'/>
 
-    5.12. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem74.png" height='25'/>
-
-    5.13. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem75.png" height='25'/>
+   5.13. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem75.png" height='25'/>
     
 
 
@@ -335,5 +334,5 @@ sam deploy --stack-name dataops-coleta-vacinas-stack --region us-east-1 --capabi
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-12 23:54:03
+Last update: 2022-03-12 23:56:01
 </div>
