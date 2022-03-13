@@ -153,7 +153,7 @@ def lambda_handler(event, context):
 
     <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem24.png" height='400'/>
  
-    5.6.	Abra o seu bucket de dados (`dataops-impacta-dados-nomesobrenome`, ou o nome criado no  <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a>) e verifique o arquivo baixado
+    5.6.	Abra o seu bucket de dados (`dataops-dados-nomesobrenome`, ou o nome criado no  <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a>) e verifique o arquivo baixado
 
 
 ## Configurar Jenkins para fazer CI/CD da função lambda
@@ -274,7 +274,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 1.	Na página inicial do Jenkins clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem51.png" height='25'/>
 
 
-2.	No campo texto abaixo de <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem52.png" height='25'/> coloque o nome do processo: `DataOpsImpactaDeployColeta`
+2.	No campo texto abaixo de <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem52.png" height='25'/> coloque o nome do processo: `DataOpsDeployColeta`
 
 3.	Selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem53.png" height='25'/>
 
@@ -329,10 +329,114 @@ sam deploy --stack-name dataops-coleta-vacinas-stack --region us-east-1 --capabi
    5.13. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem75.png" height='25'/>
     
 
+# Criar função lambda agendada com CI/CD
+
+1.	No VSCode crie um novo arquivo `template.yaml` na pasta `lab4`
+
+2.	Coloque o seguinte código no arquivo. Veja os comentários para entender o que cada declaração faz
+
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A starter AWS Lambda function.
+Resources:
+  # Criar função lambda agendada
+  lambdafunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: dataops-coleta-vacinas-ci-cd # nome da função
+      Handler: lambda_function.lambda_handler # nome do arquivo e método de onde está a função
+      Runtime: python3.9 # ambiente de execução
+      CodeUri: ./app # local onde estarão os arquivos da função
+      Description: Coletar dados de vacinas.
+      MemorySize: 512 # memória utilizada pela funçãop
+      Timeout: 900 # tempo máximo de execução, em segundos
+      Role: !Sub arn:aws:iam::${AWS::AccountId}:role/LabRole # IAM role da função para permissões a outros recursos da AWS
+      Events: # Evento agendado para execução
+        ScheduledFunction:
+          Type: Schedule
+          Properties:
+            Schedule: cron(15 00 * * ? *) # executa todo dia às 10:15
+            Name: dataops-agenda-coleta-vacina
+            Input: '{
+              "url":"https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/vacina/uf/2021-09-03/uf%3DAC/part-00000-55f3db2e-ec9a-4125-9044-11b088159962.c000.csv", 
+              "uf":"ac"
+            }' # evento com parâmetros que serão enviados para a função lambda
+```
+
+3.	Crie um novo repositório `dataops-lab4` no seu GitHub e adicione a pasta lab4 nesse repositório.
+
+4.	Criar um novo pipeline no CodePipeline para atualizar função lambda com o Jenkins
+
+5.	Abra o serviço CodePipeline no console da AWS
+
+6.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem76.png"  height='25'/>
+
+7.	Na tela de configurações do pipeline configure o seguinte:
+
+    7.1. Nome do pipeline: `dataops-coleta-vacina-ci-cd` 	
+
+    7.2. Função de serviço: <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem77.png"  height='25'/>
+
+    7.3. ARN da função: clique no campo de texto e escolha. <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem78.png"  height='25'/>. O número é o ID da sua conta e será diferente 
+
+    7.4. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem79.png"  height='25'/>
+
+8.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem80.png"  height='25'/>
+
+    8.1. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem81.png"  height='25'/> escolha                    e faça a autorização
+
+    8.2. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem82.png"  height='25'/> escolha dataops_lab4 (ou o nome do repositório que criou para este laboratório)
+
+    8.3. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem83.png"  height='25'/> escolha master (ou o nome da sua branch principal no repositório)
+
+    8.4. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem84.png"  height='25'/>
+
+9.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem85.png"  height='25'/>
+
+    9.1. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem86.png"  height='25'/> escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem87.png"  height='25'/>
+
+    9.2. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem88.png"  height='25'/> coloque `DeployColetaProvider` (mesmo nome do provider configurado no Jenkins neste laboratório)
+
+    9.3. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem89.png"  height='25'/> coloque o endereço da sua instância EC2 com Jenkins, com a porta 8080. Por exemplo: `https://12.234.67.89:8080`
+
+    9.4. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem90.png"  height='25'/> coloque `DataOpsDeployColeta (mesmo nome do projeto configurado no Jenkins neste laboratório)
+
+    9.5. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem91.png"   height='25'/>
+
+10.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem92.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem93.png" height='25'/> e depois em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem94.png" height='25'/>
+
+11.	Na tela de Revisão clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem95.png" height='25'/>
+
+12.	Acompanhe a execução do pipeline e no Jenkins e espere completar com sucesso
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem96.png" height='300'/>
+ 
+13.	Verifique se a função lambda foi criada
+
+14.	Verifique no serviço EventBridge o evento criado e o horário de execução
+
+    14.1. Esse evento irá executar automaticamente no horário definido no template e disparar a função AWS
+    
+    14.2. No EventBridge, acesse “Regras” no menu lateral esquerdo para abrir as regras de execução automática. 
+
+    14.3. Clique na regra “dataops-agenda-coleta-vacina”
+
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem97.png" height='250'/>
+ 
+    14.4. Nos detalhes da regra, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem98.png" height='25'/>
+
+    14.5. Vá até a seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem99.png" height='25'/> e na caixa de seleção ao lado de <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem100.png" height='25'/> selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem101.png" height='25'/> para ver qual a próxima execução no horário de Brasília
+ 
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem102.png" height='250'/>
+
+    14.6. Se o horário já passou ou ainda está longe (pode ser que seja só amanhã), altere no template do SAM na propriedade `Schedule` dentro de `Events` a hora da execução para daqui 10 minutos, envie para o repositório e espere a atualização da função pelo CodePipeline. O horário da AWS fica 3 horas adiantando ao horário atual. Então no agendamento coloque 3 horas a mais do horário atual. Por exemplo, se for 21:00 no seu relógio, coloque a execução para às 00:10 (`cron(10 00 * * ? *) – o primeiro número são os minutos e o segundo são as horas). Assim o evento passa a executar todos os dias as 21:10.
+
+
 
 <div class="footer">
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-12 23:56:01
+Last update: 2022-03-13 00:22:27
 </div>
