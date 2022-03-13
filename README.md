@@ -400,7 +400,7 @@ Resources:
 
     9.3. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem91.png"  height='25'/> coloque o endereço da sua instância EC2 com Jenkins, com a porta 8080. Por exemplo: `https://12.234.67.89:8080`
 
-    9.4. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem92.png"  height='25'/> coloque `DataOpsDeployColeta (mesmo nome do projeto configurado no Jenkins neste laboratório)
+    9.4. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem92.png"  height='25'/> coloque `DataOpsDeployColeta` (mesmo nome do projeto configurado no Jenkins neste laboratório)
 
     9.5. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem93.png"   height='25'/>
 
@@ -410,7 +410,7 @@ Resources:
 
 12.	Acompanhe a execução do pipeline e no Jenkins e espere completar com sucesso
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem98.png" height='300'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem98.png" height='400'/>
  
 13.	Verifique se a função lambda foi criada
 
@@ -418,19 +418,19 @@ Resources:
 
     14.1. Esse evento irá executar automaticamente no horário definido no template e disparar a função AWS
     
-    14.2. No EventBridge, acesse “Regras” no menu lateral esquerdo para abrir as regras de execução automática. 
+    14.2. No EventBridge, acesse `Regras` no menu lateral esquerdo para abrir as regras de execução automática. 
 
     14.3. Clique na regra “dataops-agenda-coleta-vacina”
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem99.png" height='250'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem99.png" height='350'/>
  
     14.4. Nos detalhes da regra, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem100.png" height='25'/>
 
     14.5. Vá até a seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem101.png" height='25'/> e na caixa de seleção ao lado de <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem102.png" height='25'/> selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem103.png" height='25'/> para ver qual a próxima execução no horário de Brasília
  
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem104.png" height='250'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem104.png" height='350'/>
 
-    14.6. Se o horário já passou ou ainda está longe (pode ser que seja só amanhã), altere no template do SAM na propriedade `Schedule` dentro de `Events` a hora da execução para daqui 10 minutos, envie para o repositório e espere a atualização da função pelo CodePipeline. O horário da AWS fica 3 horas adiantando ao horário atual. Então no agendamento coloque 3 horas a mais do horário atual. Por exemplo, se for 21:00 no seu relógio, coloque a execução para às 00:10 (`cron(10 00 * * ? *) – o primeiro número são os minutos e o segundo são as horas). Assim o evento passa a executar todos os dias as 21:10.
+    14.6. Se o horário já passou ou ainda está longe (pode ser que seja só amanhã), altere no template do SAM na propriedade `Schedule` dentro de `Events` a hora da execução para daqui 10 minutos, envie para o repositório e espere a atualização da função pelo CodePipeline. O horário da AWS fica 3 horas adiantando ao horário atual. Então no agendamento coloque 3 horas a mais do horário atual. Por exemplo, se for 21:00 no seu relógio, coloque a execução para às 00:10 (`cron(10 00 * * ? *)` – o primeiro número são os minutos e o segundo são as horas). Assim o evento passa a executar todos os dias as 21:10.
 
 
 
@@ -438,5 +438,5 @@ Resources:
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-13 00:38:39
+Last update: 2022-03-13 00:51:09
 </div>
