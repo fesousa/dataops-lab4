@@ -301,33 +301,33 @@ ${template.yaml}
 
 8.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem80.png"  height='25'/>
 
-    8.1. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem81.png"  height='25'/> escolha                    e faça a autorização
+    8.1. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem82.png"  height='25'/> escolha                    e faça a autorização
 
-    8.2. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem82.png"  height='25'/> escolha dataops_lab4 (ou o nome do repositório que criou para este laboratório)
+    8.2. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem83.png"  height='25'/> escolha dataops_lab4 (ou o nome do repositório que criou para este laboratório)
 
-    8.3. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem83.png"  height='25'/> escolha master (ou o nome da sua branch principal no repositório)
+    8.3. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem84.png"  height='25'/> escolha master (ou o nome da sua branch principal no repositório)
 
-    8.4. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem84.png"  height='25'/>
+    8.4. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem85.png"  height='25'/>
 
-9.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem85.png"  height='25'/>
+9.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem86.png"  height='25'/>
 
-    9.1. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem86.png"  height='25'/> escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem87.png"  height='25'/>
+    9.1. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem87.png"  height='25'/> escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem88.png"  height='25'/>
 
-    9.2. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem88.png"  height='25'/> coloque `DeployColetaProvider` (mesmo nome do provider configurado no Jenkins neste laboratório)
+    9.2. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem89.png"  height='25'/> coloque `DeployColetaProvider` (mesmo nome do provider configurado no Jenkins neste laboratório)
 
-    9.3. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem89.png"  height='25'/> coloque o endereço da sua instância EC2 com Jenkins, com a porta 8080. Por exemplo: `https://12.234.67.89:8080`
+    9.3. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem90.png"  height='25'/> coloque o endereço da sua instância EC2 com Jenkins, com a porta 8080. Por exemplo: `https://12.234.67.89:8080`
 
-    9.4. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem90.png"  height='25'/> coloque `DataOpsDeployColeta (mesmo nome do projeto configurado no Jenkins neste laboratório)
+    9.4. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem91.png"  height='25'/> coloque `DataOpsDeployColeta (mesmo nome do projeto configurado no Jenkins neste laboratório)
 
-    9.5. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem91.png"   height='25'/>
+    9.5. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem92.png"   height='25'/>
 
-10.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem92.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem93.png" height='25'/> e depois em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem94.png" height='25'/>
+10.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem93.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem94.png" height='25'/> e depois em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem95.png" height='25'/>
 
-11.	Na tela de Revisão clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem95.png" height='25'/>
+11.	Na tela de Revisão clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem96.png" height='25'/>
 
 12.	Acompanhe a execução do pipeline e no Jenkins e espere completar com sucesso
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem96.png" height='300'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem97.png" height='300'/>
  
 13.	Verifique se a função lambda foi criada
 
@@ -339,13 +339,13 @@ ${template.yaml}
 
     14.3. Clique na regra “dataops-agenda-coleta-vacina”
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem97.png" height='250'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem98.png" height='250'/>
  
-    14.4. Nos detalhes da regra, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem98.png" height='25'/>
+    14.4. Nos detalhes da regra, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem99.png" height='25'/>
 
-    14.5. Vá até a seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem99.png" height='25'/> e na caixa de seleção ao lado de <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem100.png" height='25'/> selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem101.png" height='25'/> para ver qual a próxima execução no horário de Brasília
+    14.5. Vá até a seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem100.png" height='25'/> e na caixa de seleção ao lado de <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem101.png" height='25'/> selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem102.png" height='25'/> para ver qual a próxima execução no horário de Brasília
  
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem102.png" height='250'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem1032.png" height='250'/>
 
     14.6. Se o horário já passou ou ainda está longe (pode ser que seja só amanhã), altere no template do SAM na propriedade `Schedule` dentro de `Events` a hora da execução para daqui 10 minutos, envie para o repositório e espere a atualização da função pelo CodePipeline. O horário da AWS fica 3 horas adiantando ao horário atual. Então no agendamento coloque 3 horas a mais do horário atual. Por exemplo, se for 21:00 no seu relógio, coloque a execução para às 00:10 (`cron(10 00 * * ? *) – o primeiro número são os minutos e o segundo são as horas). Assim o evento passa a executar todos os dias as 21:10.
 
