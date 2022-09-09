@@ -346,7 +346,7 @@ Resources:
     Properties:
       FunctionName: dataops-coleta-vacinas-ci-cd # nome da função
       Handler: lambda_function.lambda_handler # nome do arquivo e método de onde está a função
-      Runtime: python3.9 # ambiente de execução
+      Runtime: python3.7 # ambiente de execução
       CodeUri: ./app # local onde estarão os arquivos da função
       Description: Coletar dados de vacinas.
       MemorySize: 512 # memória utilizada pela funçãop
@@ -438,5 +438,5 @@ Resources:
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-03-20 17:55:06
+Last update: 2022-04-02 01:12:22
 </div>
