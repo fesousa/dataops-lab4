@@ -25,7 +25,7 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 
 2.	Coloque o seguinte código  no arquivo
 
-  Este código faz o download do arquivo de vacinação no AC disponível <a href="https://dados.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8" target="_blank"> aqui </a> e copie para o bucket criado no <a href="https://github.com/fesousa/dataops-lab1" target="_blank"> Laboratório 1 </a> (nome sugerido foi `dataops-dados-nomesobrenome`, sendo que `nomesobrenome` deve ser seu nome e sobrenome; ou entáo coloque o nome do bucker que criou no  <a href="https://github.com/fesousa/dataops-lab1" target="_blank"> Laboratório 1 </a>, se for diferente)
+  Este código faz o download do arquivo de vacinação no AC disponível <a href="https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-e33d798d-9c1a-4819-af1f-3b0805041c4d.c000.csv" target="_blank"> aqui </a> e copie para o bucket criado no <a href="https://github.com/fesousa/dataops-lab1" target="_blank"> Laboratório 1 </a> (nome sugerido foi `dataops-dados-nomesobrenome`, sendo que `nomesobrenome` deve ser seu nome e sobrenome; ou entáo coloque o nome do bucker que criou no  <a href="https://github.com/fesousa/dataops-lab1" target="_blank"> Laboratório 1 </a>, se for diferente)
 
 
 ```python
@@ -133,7 +133,7 @@ def lambda_handler(event, context):
 
     ```json
     {
-      "url":"https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/vacina/uf/2021-09-03/uf%3DAC/part-00000-55f3db2e-ec9a-4125-9044-11b088159962.c000.csv", 
+      "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-e33d798d-9c1a-4819-af1f-3b0805041c4d.c000.csv", 
       "uf":"ac"
     }
     ```
@@ -438,5 +438,5 @@ Resources:
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-04-02 01:12:22
+Last update: 2022-09-09 22:59:16
 </div>
