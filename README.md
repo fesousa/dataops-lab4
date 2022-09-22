@@ -133,7 +133,7 @@ def lambda_handler(event, context):
 
     ```json
     {
-      "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-2e251a5b-deaf-464f-b8a4-e466e8d854ee.c000.csv", 
+      "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-aa4aa843-ca60-47c8-899c-95d356a683f8.c000.csv", 
       "uf":"ac"
     }
     ```
