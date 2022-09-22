@@ -25,7 +25,7 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 
 2.	Coloque o seguinte código  no arquivo
 
-  Este código faz o download do arquivo de vacinação no AC disponível <a href="https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-aa4aa843-ca60-47c8-899c-95d356a683f8.c000.csv" target="_blank"> aqui </a> e copie para o bucket criado no <a href="https://github.com/fesousa/dataops-lab1" target="_blank"> Laboratório 1 </a> (nome sugerido foi `dataops-dados-nomesobrenome`, sendo que `nomesobrenome` deve ser seu nome e sobrenome; ou entáo coloque o nome do bucker que criou no  <a href="https://github.com/fesousa/dataops-lab1" target="_blank"> Laboratório 1 </a>, se for diferente)
+  Este código faz o download do arquivo de vacinação no AC disponível <a href="https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-2e251a5b-deaf-464f-b8a4-e466e8d854ee.c000.csv" target="_blank"> aqui </a> e copie para o bucket criado no <a href="https://github.com/fesousa/dataops-lab1" target="_blank"> Laboratório 1 </a> (nome sugerido foi `dataops-dados-nomesobrenome`, sendo que `nomesobrenome` deve ser seu nome e sobrenome; ou entáo coloque o nome do bucker que criou no  <a href="https://github.com/fesousa/dataops-lab1" target="_blank"> Laboratório 1 </a>, se for diferente)
 
 
 ```python
@@ -359,7 +359,7 @@ Resources:
             Schedule: cron(15 00 * * ? *) # executa todo dia às 10:15
             Name: dataops-agenda-coleta-vacina
             Input: '{
-              "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-aa4aa843-ca60-47c8-899c-95d356a683f8.c000.csv", 
+              "url":"https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/vacina/uf/2021-09-03/uf%3DAC/part-00000-55f3db2e-ec9a-4125-9044-11b088159962.c000.csv", 
               "uf":"ac"
             }' # evento com parâmetros que serão enviados para a função lambda
 ```
@@ -438,5 +438,5 @@ Resources:
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-09-16 23:36:11
+Last update: 2022-09-22 13:37:54
 </div>
