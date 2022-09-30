@@ -313,7 +313,7 @@ python3 -m venv $PYENV_HOME
 #Ativa o venv
 . $PYENV_HOME/bin/activate
 #instala aws-sam-cli
-pip install aws-sam-cli==2.10.1
+pip install aws-sam-cli==1.51.0
 #Construir pacote
 sam build
 #Cria o pacote para publicação da função lambda
@@ -359,7 +359,7 @@ Resources:
             Schedule: cron(15 00 * * ? *) # executa todo dia às 10:15
             Name: dataops-agenda-coleta-vacina
             Input: '{
-              "url":"https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/vacina/uf/2021-09-03/uf%3DAC/part-00000-55f3db2e-ec9a-4125-9044-11b088159962.c000.csv", 
+              "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-ebb720ff-cda9-42f4-90a0-e4c8a15c22aa.c000.csv", 
               "uf":"ac"
             }' # evento com parâmetros que serão enviados para a função lambda
 ```
@@ -438,5 +438,5 @@ Resources:
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-09-30 22:04:57
+Last update: 2022-09-30 23:09:18
 </div>
