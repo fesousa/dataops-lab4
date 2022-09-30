@@ -5,7 +5,7 @@ python3 -m venv $PYENV_HOME
 #Ativa o venv
 . $PYENV_HOME/bin/activate
 #instala aws-sam-cli
-pip install aws-sam-cli==2.10.1
+pip install aws-sam-cli==1.51.0
 #Construir pacote
 sam build
 #Cria o pacote para publicação da função lambda
