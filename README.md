@@ -313,6 +313,7 @@ python3 -m venv $PYENV_HOME
 #Ativa o venv
 . $PYENV_HOME/bin/activate
 #instala aws-sam-cli
+pip install Jinja2==2.10.1
 pip install aws-sam-cli==1.51.0
 #Construir pacote
 sam build
@@ -438,5 +439,5 @@ Resources:
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-09-30 23:09:18
+Last update: 2022-09-30 23:12:43
 </div>
