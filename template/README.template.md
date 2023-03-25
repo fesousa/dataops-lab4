@@ -275,7 +275,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
     * `Branch Specifier (blank for 'any')`: Coloque a sua branch principal (provavelmente `main`) 
 
-16. Clique em `Salvar`
+16. Clique em `Aplicar` e depois em `Salvar`
 
 17. Abra seu repositório do Lab4 no github (se ainda não tem, crie o repositório) 
 
