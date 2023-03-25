@@ -240,95 +240,105 @@ chmod 400 labsuser.pem
 
 Essa é a senha do administrador. Quando acessar o Jenkins novamente, será solicitado o usuário e senha. Utilize o usuário “admin” e a senha que acabou de copiar
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem42.png" height='350'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem42.png" width='100%'/>
 
-13.	Feche de customização do Jenkins e clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem43.png" height='25'/>
+14. Na tela de customização, clique em  `Instalar as extensões sugeridas` e aguarde a instalação ser finalizada
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem106.png" width='100%'/>
+
+15. Assim que instalação terminar, na nova tela clique em `Pular e continuar como administrador` 
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem107.png" width='100%'/>
+
+15. Na próxima tela clique em `Gravar e concluir` 
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem108.png" width='100%'/>
+
+16. Por fim, clique em `Começar a o Jenkins`
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem44.png" height='350'/>
 
+# Configurar credenciais do Github
 
-14.	Instalar o plugin do CodePipeline
+1. No seu repositório, clique no seu perfil no canto superior direito e depois em `Settings`
 
-    14.1.	Na página inicial do Jenkins clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem45.png" height='25'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem112.png" height='250'/> 
 
-    14.2.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem46.png" height='25'/>
+2. No menu lateral procure por <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem113.png" height='25'/> (última opção)
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem47.png" height='200'/>
- 
-    14.3.	Clique na aba <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem48.png" height='25'/>
+3. No novo menu lateral clique abra `Personal access tokens` e clique em `Token (classic)` 
 
-    14.4.	No campo de busca acima das abas, procure por CodePipeline
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem114.png" height='150'/> 
 
-    14.5.	Clique no checkbox do registro encontrado
+4. Clique na opção `Generate new token` e depois em `Generate new token (classic)`
 
-    14.6.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem49.png" height='25'/>
+5. Volte ao Jenkins. Na página inicial do Jenkins clique em `Gerenciar Jenkins` no menu lateral
 
-    14.7.	No final da nova tela, selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem50.png" height='25'/>
+6. Clique em `Ferramentas de configuração global`
 
-    14.8.	Aguarde o Jenkins reiniciar
+7. Procure pela seção `Git` e clique no botão `Add Git` e depois em `JGit`
 
-    14.9.	Quando a tela de login abrir novamente, coloque o usuário `admin` e a senha utilizada anteriormente
+8. Clique em `Save`
 
-## Criar novo processo de construção no Jenkins
+6. Volte ao Jenkins. Na página inicial do Jenkins clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem45.png" height='25'/> no menu lateral
 
-1.	Na página inicial do Jenkins clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem51.png" height='25'/>
+6. Clique em `Manage credentials` 
 
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem109.png" height='75'/> 
 
-2.	No campo texto abaixo de <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem52.png" height='25'/> coloque o nome do processo: `DataOpsDeployColeta`
+7. Clique em `(global)`
 
-3.	Selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem53.png" height='25'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem110.png" width='100%'/> 
 
-4.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem54.png" height='25'/>
+8. Clique no botão <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem111.png" height='25'/>
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem55.png" height='300'/>
+9. Na próxima tela coloque seu usuário do github no campo `Username` e o token gerado anteriormente no campo `Password` e clique em `Create`
 
- 
-5.	Configure o processo:
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem117.png" width='100%'/> 
 
-    5.1. Selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem56.png" height='25'/>
+10. Volte a tela inicial do Jenkins e clique em `Novo tarefa`
 
-    5.2. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem57.png" height='25'/> selecione <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem58.png" height='25'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem118.png" width='100%'/> 
 
-    5.3. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem59.png" height='25'/> selecione <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem60.png" height='25'/>   
+11. Configure o nome da tarefa para `DataOpsDeployColeta`
 
-    5.4. Não é necessário colocar credenciais. A Instância EC2 já tem o IAM Role que dá acesso aos serviços da AWS
+12. Selecione a opção `Pipeline`
 
-    5.5. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem61.png" height='25'/> escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem62.png" height='25'/>
+13. Clique em `Tudo certo`
 
-    5.6. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem63.png" height='25'/> coloque `DeployColetaProvider`
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem119.png" width='100%'/> 
 
-    5.7. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem64.png" height='25'/> selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem65.png" height='25'/>
+14. Na tela de configuração do pipeline, procure pela seção `Build Triggers` e selecione <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem120.png" height='25'/>
 
-    5.8.Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem66.png" height='25'/> digite: `* * * * *` (5 asteriscos, separados por espaços)
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem121.png" width='100%'/> 
 
-    5.9. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem67.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem68.png" height='25'/> e escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem69.png" height='25'/>
+15. Aida na mesma tela, procure pela seção `Pipeline` e configura conforme a imagem abaixo. Troque os seguintes valores pelas suas configurações:
 
-    5.10. No campo de texto <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem70.png" height='25'/> coloque o seguinte script. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no <a href="https://github.com/fesousa/dataops-lab2" target="_blank"> Laboratório 2 </a>
+    * `Repository URL`: URL do seu repositório do lab 4
 
-```bash
-#Define o caminho para o python
-PYENV_HOME=$WORKSPACE
-#Cria um venv na pasta
-python3 -m venv $PYENV_HOME
-#Ativa o venv
-. $PYENV_HOME/bin/activate
-#instala aws-sam-cli
-pip install Jinja2==2.10.1
-pip install aws-sam-cli==1.51.0
-#Construir pacote
-sam build
-#Cria o pacote para publicação da função lambda
-sam package --region us-east-1 --s3-bucket deploy-nomesobrenome-accountID-regiao
-#Publica a função lambda utilizando o bucket s3 e CloudFormation
-sam deploy --stack-name dataops-coleta-vacinas-stack --region us-east-1 --capabilities CAPABILITY_IAM --s3-bucket deploy-nomesobrenome-accountID-regiao
-```
-    
-   5.11. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem71.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem72.png" height='25'/> e escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem73.png" height='25'/>
+    * `Credentials`: selecione a credencial criada anteriormente
 
-   5.12. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem74.png" height='25'/>
+    * `Branch Specifier (blank for 'any')`: Coloque a sua branch principal (provavelmente `main`) 
 
-   5.13. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem75.png" height='25'/>
-    
+16. Clique em `Salvar`
+
+17. Abra seu repositório do Lab4 no github (se ainda não tem, crie o repositório) 
+
+18. Clique em `Settings > Webhooks`
+
+19. Clique em `Add webhook` E CONFIGURE O SEGUINTE:
+
+    * `Payload URL`: `http://{IP_JENKINS_EC2}:8080/github-webhook/`  Troque `{IP_JENKINS_EC2}` pelo IP da sua instância EC2. Repare na barra no final da URL
+
+    * `Content type`: `application/json`
+
+20. Clique em `Add webhook`
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem124.png" width='100%'/> 
+
+21. Quando voltar a lista de webhooks você deve ver um check ao lado do webhook
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem125.png" height='25'/>
 
 # Criar função lambda agendada com CI/CD
 
@@ -439,5 +449,5 @@ Resources:
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-10-14 23:09:20
+Last update: 2023-03-25 15:32:00
 </div>
