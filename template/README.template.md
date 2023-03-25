@@ -230,15 +230,17 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 1. No seu repositório, clique no seu perfil no canto superior direito e depois em `Settings`
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem112.png" height='250'/> 
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem112.png" height='500'/> 
 
 2. No menu lateral procure por <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem113.png" height='25'/> (última opção)
 
 3. No novo menu lateral clique abra `Personal access tokens` e clique em `Token (classic)` 
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem114.png" height='150'/> 
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem115.png" height='150'/> 
 
 4. Clique na opção `Generate new token` e depois em `Generate new token (classic)`
+
+5.
 
 5. Volte ao Jenkins. Na página inicial do Jenkins clique em `Gerenciar Jenkins` no menu lateral
 
@@ -290,7 +292,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 16. Clique em `Aplicar` e depois em `Salvar`
 
-17. Abra seu repositório do Lab4 no github (se ainda não tem, crie o repositório) 
+17. Volte ao Github e abra seu repositório do Lab4
 
 18. Clique em `Settings > Webhooks`
 
@@ -313,7 +315,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 1. No VSCode, crie um arquivo na pasta `lab4` chamado `Jenkinsfile` com o seguinte conteúdo. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
 
-```json
+```javascript
 ${Jenkinsfile}
 ```
 
