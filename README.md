@@ -312,7 +312,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem121.png" width='100%'/> 
 
-15. Aida na mesma tela, procure pela seção `Pipeline` e configura conforme a imagem abaixo. Troque os seguintes valores pelas suas configurações:
+15. Aida na mesma tela, procure pela seção `Pipeline` e configure conforme a imagem abaixo. Troque os seguintes valores pelas suas configurações:
 
     * `Repository URL`: URL do seu repositório do lab 4
 
@@ -338,7 +338,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 21. Quando voltar a lista de webhooks você deve ver um check ao lado do webhook
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem125.png" height='25'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem125.png" height='75'/>
 
 # Criar função lambda agendada com CI/CD
 
@@ -449,5 +449,5 @@ Resources:
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-03-25 15:54:14
+Last update: 2023-03-25 16:01:05
 </div>
