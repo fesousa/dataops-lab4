@@ -1,6 +1,6 @@
 # DataOps - Laboratório 4
 
-Coleta de Dados com Lambda, Eventos e implantação com CodePipelne e Jenkins
+Coleta de Dados com Lambda, Eventos e implantação com Github e Jenkins
 
 As instruções do laboratório estão em português. Para alterar o idioma, procure a opção na barra inferior do console AWS.
 
@@ -8,9 +8,9 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 ## Objetivos
 
 * Configurar Jenkins para construir a aplicação e implantar na AWS
-*	Utilizar CodePipeline para integrar e implantar com Jenkins
+*	Utilizar Github para integrar e implantar com Jenkins
 *	Criar uma função Lambda para coleta de dados, disparada por um evento agendado
-*	Implantar uma Função Lambda utilizando AWS SAM, Jenkins e CodePipeline
+*	Implantar uma Função Lambda utilizando AWS SAM, Jenkins e Github
 
 
 
@@ -317,7 +317,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 ${Jenkinsfile}
 ```
 
-2. Envie os arquivos para o github e acompanhe a execução no Jenkins. Se não executar automaticamente, abra a página da Tarefa criada no Jenkins e clique em `Construir Agora`. As próximas alterações no repositório devem iniciar o pipeline automaticamente
+2. Envie os arquivos para o github e acompanhe a execução no Jenkins. Se não executar automaticamente, abra a página da Tarefa criada no Jenkins e clique em `Construir agora`. As próximas alterações no repositório devem iniciar o pipeline automaticamente. Faça alguma alteração em algum arquivo do lab4, envie para o github e veja a execução automática do pipeline.
 
 
 12.	Acompanhe a execução no Jenkins e espere completar com sucesso
@@ -342,7 +342,7 @@ ${Jenkinsfile}
  
     <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem104.png" height='350'/>
 
-    14.6. Se o horário já passou ou ainda está longe (pode ser que seja só amanhã), altere no template do SAM na propriedade `Schedule` dentro de `Events` a hora da execução para daqui 10 minutos, envie para o repositório e espere a atualização da função pelo CodePipeline. O horário da AWS fica 3 horas adiantando ao horário atual. Então no agendamento coloque 3 horas a mais do horário atual. Por exemplo, se for 21:00 no seu relógio, coloque a execução para às 00:10 (`cron(10 00 * * ? *)` – o primeiro número são os minutos e o segundo são as horas). Assim o evento passa a executar todos os dias as 21:10.
+    14.6. Se o horário já passou ou ainda está longe (pode ser que seja só amanhã), altere no template do SAM na propriedade `Schedule` dentro de `Events` a hora da execução para daqui 10 minutos, envie para o repositório e espere a atualização da função pelo pipeline. O horário da AWS fica 3 horas adiantando ao horário atual. Então no agendamento coloque 3 horas a mais do horário atual. Por exemplo, se for 21:00 no seu relógio, coloque a execução para às 00:10 (`cron(10 00 * * ? *)` – o primeiro número são os minutos e o segundo são as horas). Assim o evento passa a executar todos os dias as 21:10.
 
 
 
