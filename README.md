@@ -156,6 +156,44 @@ def lambda_handler(event, context):
     5.6.	Abra o seu bucket de dados (`dataops-dados-nomesobrenome`, ou o nome criado no  <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a>) e verifique o arquivo baixado
 
 
+# Implantar função lambda com CI/CD
+
+1.	No VSCode crie um novo arquivo `template.yaml` na pasta `lab4`
+
+2.	Coloque o seguinte código no arquivo. Veja os comentários para entender o que cada declaração faz
+
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A starter AWS Lambda function.
+Resources:
+  # Criar função lambda agendada
+  lambdafunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: dataops-coleta-vacinas-ci-cd # nome da função
+      Handler: lambda_function.lambda_handler # nome do arquivo e método de onde está a função
+      Runtime: python3.7 # ambiente de execução
+      CodeUri: ./app # local onde estarão os arquivos da função
+      Description: Coletar dados de vacinas.
+      MemorySize: 512 # memória utilizada pela funçãop
+      Timeout: 900 # tempo máximo de execução, em segundos
+      Role: !Sub arn:aws:iam::${AWS::AccountId}:role/LabRole # IAM role da função para permissões a outros recursos da AWS
+      Events: # Evento agendado para execução
+        ScheduledFunction:
+          Type: Schedule
+          Properties:
+            Schedule: cron(15 00 * * ? *) # executa todo dia às 10:15
+            Name: dataops-agenda-coleta-vacina
+            Input: '{
+              "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-ebb720ff-cda9-42f4-90a0-e4c8a15c22aa.c000.csv", 
+              "uf":"ac"
+            }' # evento com parâmetros que serão enviados para a função lambda
+```
+
+3.	Crie um  repositório `dataops-lab4` no seu GitHub e adicione a pasta lab4 nesse repositório.
+
+
 ## Configurar Jenkins para fazer CI/CD da função lambda
 
 1. Inicie seu ambiente da AWS como fez nos laboratórios anteriores
@@ -341,87 +379,44 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem125.png" height='75'/>
 
 
+# Executar pipeline Jenkins
 
-# Criar função lambda agendada com CI/CD
+1. No VSCode, crie um arquivo na pasta `lab4` chamado `Jenkinsfile` com o seguinte conteúdo. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
 
-1.	No VSCode crie um novo arquivo `template.yaml` na pasta `lab4`
-
-2.	Coloque o seguinte código no arquivo. Veja os comentários para entender o que cada declaração faz
-
-```yaml
-AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
-Description: A starter AWS Lambda function.
-Resources:
-  # Criar função lambda agendada
-  lambdafunction:
-    Type: 'AWS::Serverless::Function'
-    Properties:
-      FunctionName: dataops-coleta-vacinas-ci-cd # nome da função
-      Handler: lambda_function.lambda_handler # nome do arquivo e método de onde está a função
-      Runtime: python3.7 # ambiente de execução
-      CodeUri: ./app # local onde estarão os arquivos da função
-      Description: Coletar dados de vacinas.
-      MemorySize: 512 # memória utilizada pela funçãop
-      Timeout: 900 # tempo máximo de execução, em segundos
-      Role: !Sub arn:aws:iam::${AWS::AccountId}:role/LabRole # IAM role da função para permissões a outros recursos da AWS
-      Events: # Evento agendado para execução
-        ScheduledFunction:
-          Type: Schedule
-          Properties:
-            Schedule: cron(15 00 * * ? *) # executa todo dia às 10:15
-            Name: dataops-agenda-coleta-vacina
-            Input: '{
-              "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-ebb720ff-cda9-42f4-90a0-e4c8a15c22aa.c000.csv", 
-              "uf":"ac"
-            }' # evento com parâmetros que serão enviados para a função lambda
+```json
+pipeline {
+  agent any
+ 
+  stages {
+    stage('instalar sam-cli') {
+      steps {
+        sh 'python3 -m venv venv && venv/bin/pip install aws-sam-cli'
+        stash includes: '**/venv/**/*', name: 'venv'
+      }
+    }
+    stage('deploy') {
+      environment {
+        STACK_NAME = 'dataops-coleta-vacinas-stack'
+        S3_BUCKET = 'dataops-deploy-fernandosousa'
+      }
+      steps {
+        unstash 'venv'        
+        sh 'venv/bin/sam build'
+        stash includes: '**/.aws-sam/**/*', name: 'aws-sam'
+        unstash 'aws-sam'
+        sh 'venv/bin/sam package --region us-east-1 --s3-bucket $S3_BUCKET'
+        stash includes: '**/.aws-sam/**/*', name: 'aws-sam'
+        sh 'venv/bin/sam deploy --stack-name $STACK_NAME --region us-east-1 --capabilities CAPABILITY_IAM --s3-bucket $S3_BUCKET'
+      }
+    }   
+  }
+}
 ```
 
-3.	Crie um novo repositório `dataops-lab4` no seu GitHub e adicione a pasta lab4 nesse repositório.
+2. Envie os arquivos para o github e acompanhe a execução no Jenkins. Se não executar automaticamente, abra a página da Tarefa criada no Jenkins e clique em `Construir Agora`. As próximas alterações no repositório devem iniciar o pipeline automaticamente
 
-4.	Criar um novo pipeline no CodePipeline para atualizar função lambda com o Jenkins
 
-5.	Abra o serviço CodePipeline no console da AWS
-
-6.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem76.png"  height='25'/>
-
-7.	Na tela de configurações do pipeline configure o seguinte:
-
-    7.1. Nome do pipeline: `dataops-coleta-vacina-ci-cd` 	
-
-    7.2. Função de serviço: <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem77.png"  height='25'/>
-
-    7.3. ARN da função: clique no campo de texto e escolha. <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem78.png"  height='25'/>. O número é o ID da sua conta e será diferente 
-
-    7.4. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem79.png"  height='25'/>
-
-8.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem80.png"  height='25'/>
-
-    8.1. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem82.png"  height='25'/> escolha  <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem83.png"  height='25'/> e faça a autorização
-
-    8.2. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem84.png"  height='25'/> escolha dataops_lab4 (ou o nome do repositório que criou para este laboratório)
-
-    8.3. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem85.png"  height='25'/> escolha master (ou o nome da sua branch principal no repositório)
-
-    8.4. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem86.png"  height='25'/>
-
-9.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem87.png"  height='25'/>
-
-    9.1. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem88.png"  height='25'/> escolha <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem89.png"  height='25'/>
-
-    9.2. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem90.png"  height='25'/> coloque `DeployColetaProvider` (mesmo nome do provider configurado no Jenkins neste laboratório)
-
-    9.3. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem91.png"  height='25'/> coloque o endereço da sua instância EC2 com Jenkins, com a porta 8080. Por exemplo: `https://12.234.67.89:8080`
-
-    9.4. Em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem92.png"  height='25'/> coloque `DataOpsDeployColeta` (mesmo nome do projeto configurado no Jenkins neste laboratório)
-
-    9.5. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem93.png"   height='25'/>
-
-10.	Na tela <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem94.png" height='25'/> clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem95.png" height='25'/> e depois em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem96.png" height='25'/>
-
-11.	Na tela de Revisão clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem97.png" height='25'/>
-
-12.	Acompanhe a execução do pipeline e no Jenkins e espere completar com sucesso
+12.	Acompanhe a execução no Jenkins e espere completar com sucesso
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem98.png" height='400'/>
  
@@ -451,5 +446,5 @@ Resources:
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-03-25 16:34:10
+Last update: 2023-03-25 16:44:05
 </div>
