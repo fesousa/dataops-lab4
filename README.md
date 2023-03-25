@@ -183,7 +183,7 @@ Resources:
         ScheduledFunction:
           Type: Schedule
           Properties:
-            Schedule: cron(15 00 * * ? *) # executa todo dia às 10:15
+            Schedule: cron(15 10 * * ? *) # executa todo dia às 10:15
             Name: dataops-agenda-coleta-vacina
             Input: '{
               "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-ebb720ff-cda9-42f4-90a0-e4c8a15c22aa.c000.csv", 
@@ -300,15 +300,17 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 1. No seu repositório, clique no seu perfil no canto superior direito e depois em `Settings`
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem112.png" height='250'/> 
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem112.png" height='500'/> 
 
 2. No menu lateral procure por <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem113.png" height='25'/> (última opção)
 
 3. No novo menu lateral clique abra `Personal access tokens` e clique em `Token (classic)` 
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem114.png" height='150'/> 
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem115.png" height='150'/> 
 
 4. Clique na opção `Generate new token` e depois em `Generate new token (classic)`
+
+5.
 
 5. Volte ao Jenkins. Na página inicial do Jenkins clique em `Gerenciar Jenkins` no menu lateral
 
@@ -360,7 +362,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 16. Clique em `Aplicar` e depois em `Salvar`
 
-17. Abra seu repositório do Lab4 no github (se ainda não tem, crie o repositório) 
+17. Volte ao Github e abra seu repositório do Lab4
 
 18. Clique em `Settings > Webhooks`
 
@@ -383,7 +385,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 1. No VSCode, crie um arquivo na pasta `lab4` chamado `Jenkinsfile` com o seguinte conteúdo. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
 
-```json
+```javascript
 pipeline {
   agent any
  
@@ -446,5 +448,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-03-25 16:48:20
+Last update: 2023-03-25 16:55:41
 </div>
