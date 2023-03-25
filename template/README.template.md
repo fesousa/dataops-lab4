@@ -111,7 +111,7 @@ ${app/lambda_function.py}
     5.6.	Abra o seu bucket de dados (`dataops-dados-nomesobrenome`, ou o nome criado no  <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a>) e verifique o arquivo baixado
 
 
-# Implantar função lambda com CI/CD
+# Template SAM para a função lambda
 
 1.	No VSCode crie um novo arquivo `template.yaml` na pasta `lab4`
 
@@ -240,17 +240,31 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 4. Clique na opção `Generate new token` e depois em `Generate new token (classic)`
 
-5.
+5. Preencha um nome no campo `Note`
 
-5. Volte ao Jenkins. Na página inicial do Jenkins clique em `Gerenciar Jenkins` no menu lateral
+6. Defina a data de expiração (`Expiration`) para 90 dias 
 
-6. Clique em `Ferramentas de configuração global`
+7. Em `Select scopes` selecione as opções conforme imagem abaixo:
 
-7. Procure pela seção `Git` e clique no botão `Add Git` e depois em `JGit`
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem126.png" width='100%'/> 
 
-8. Clique em `Save`
+8. Clique em `Generate token`
 
-6. Volte ao Jenkins. Na página inicial do Jenkins clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem45.png" height='25'/> no menu lateral
+9. Na página seguinte será mostrado o personal access token gerado, no campo com fundo verde. Ele funciona como uma senha para acessar o github a partir de aplicações. **Guarde esse token**, o github não mostra mais ele. Se perder, terá que gerar outro e reconfigurar tudo que usa o token.
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem127.png" width='100%'/> 
+
+## Criar pipeline no Jenkins
+
+1. Volte ao Jenkins. Na página inicial do Jenkins clique em `Gerenciar Jenkins` no menu lateral
+
+2. Clique em `Ferramentas de configuração global`
+
+3. Procure pela seção `Git` e clique no botão `Add Git` e depois em `JGit`
+
+4. Clique em `Save`
+
+5. Volte à pagina inicial do jenkins e clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem45.png" height='25'/> no menu lateral
 
 6. Clique em `Manage credentials` 
 
@@ -262,7 +276,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 8. Clique no botão <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem111.png" height='25'/>
 
-9. Na próxima tela coloque seu usuário do github no campo `Username` e o token gerado anteriormente no campo `Password` e clique em `Create`
+9. Na próxima tela coloque seu usuário do github no campo `Username`, o token gerado anteriormente no campo `Password` e clique em `Create`
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem117.png" width='100%'/> 
 
@@ -292,34 +306,36 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 16. Clique em `Aplicar` e depois em `Salvar`
 
-17. Volte ao Github e abra seu repositório do Lab4
+## Configurar webhook no Github
 
-18. Clique em `Settings > Webhooks`
+1. Volte ao Github e abra seu repositório do Lab4
 
-19. Clique em `Add webhook` E CONFIGURE O SEGUINTE:
+2. Clique em `Settings > Webhooks`
+
+3. Clique em `Add webhook` E CONFIGURE O SEGUINTE:
 
     * `Payload URL`: `http://{IP_JENKINS_EC2}:8080/github-webhook/`  Troque `{IP_JENKINS_EC2}` pelo IP da sua instância EC2. Repare na barra no final da URL
 
     * `Content type`: `application/json`
 
-20. Clique em `Add webhook`
+4. Clique em `Add webhook`
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem124.png" width='100%'/> 
 
-21. Quando voltar a lista de webhooks você deve ver um check ao lado do webhook
+5. Quando voltar a lista de webhooks você deve ver um check ao lado do webhook
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem125.png" height='75'/>
 
 
 # Executar pipeline Jenkins
 
-1. No VSCode, crie um arquivo na pasta `lab4` chamado `Jenkinsfile` com o seguinte conteúdo. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
+1. No VSCode, crie o arquivo `Jenkinsfile` na pasta `lab4` com o seguinte conteúdo. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
 
 ```javascript
 ${Jenkinsfile}
 ```
 
-2. Envie os arquivos para o github e acompanhe a execução no Jenkins. Se não executar automaticamente, abra a página da Tarefa criada no Jenkins e clique em `Construir agora`. As próximas alterações no repositório devem iniciar o pipeline automaticamente. Faça alguma alteração em algum arquivo do lab4, envie para o github e veja a execução automática do pipeline.
+2. Envie os arquivos para o github e acompanhe a execução no Jenkins. Se não executar automaticamente, abra a o pipeline criado no Jenkins e clique em `Construir agora`. As próximas alterações no repositório devem iniciar o pipeline automaticamente. Faça alguma alteração em algum arquivo do lab4, envie para o github e veja a execução automática do pipeline.
 
 
 12.	Acompanhe a execução no Jenkins e espere completar com sucesso
