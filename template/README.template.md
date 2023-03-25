@@ -296,7 +296,6 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem125.png" height='75'/>
 
 
-
 # Criar função lambda agendada com CI/CD
 
 1.	No VSCode crie um novo arquivo `template.yaml` na pasta `lab4`
