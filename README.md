@@ -418,7 +418,7 @@ pipeline {
     stage('deploy') {
       environment {
         STACK_NAME = 'dataops-coleta-vacinas-stack'
-        S3_BUCKET = 'deploy-nomesobrenome-accountID-regiao'
+        S3_BUCKET = 'dataops-deploy-fernandosousa'
       }
       steps {
         unstash 'venv'        
@@ -467,5 +467,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-03-25 20:23:17
+Last update: 2023-04-19 22:41:45
 </div>
