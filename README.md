@@ -167,7 +167,7 @@ def lambda_handler(event, context):
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
-Description: A starter AWS Lambda function.
+Description: Coleta de dados.
 Resources:
   # Criar função lambda agendada
   lambdafunction:
@@ -467,5 +467,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-04-19 22:41:45
+Last update: 2023-04-19 22:55:46
 </div>
