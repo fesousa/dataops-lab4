@@ -131,13 +131,13 @@ def lambda_handler(event, context):
 
     5.2.	Na caixa de texto onde está a string JSON, troque pelo seguinte, para coletar os dados de vacina do Acre:
 
-        OBS: O Link abaixo é dinâmico. Pegue outro link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173
+    Pegue um link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173. Clique com o botão direito em um dos arquivos do Acre e clique em "Copiar endereço do link". Coloque este link no logar de `LINK` no JSON abaixo.
     
-    
+
 
     ```json
     {
-      "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-0e081da1-2126-45b3-8bfd-78667a8589af.c000.csv", 
+      "url":"LINK", 
       "uf":"ac"
     }
     ```
@@ -469,5 +469,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-08-19 23:32:23
+Last update: 2023-08-19 23:35:03
 </div>
