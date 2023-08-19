@@ -7,7 +7,7 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 
 ## Objetivos
 
-* Configurar Jenkins para construir a aplicação e implantar na AWS
+*   Configurar Jenkins para construir a aplicação e implantar na AWS
 *	Utilizar Github para integrar e implantar com Jenkins
 *	Criar uma função Lambda para coleta de dados, disparada por um evento agendado
 *	Implantar uma Função Lambda utilizando AWS SAM, Jenkins e Github
@@ -21,7 +21,7 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 
 ## Função Lambda para coletar dados
 
-1.	No VSCode, crie uma nova pasta `lab4` e dentro dela uma outra pasta `app`. Dentro da pasta `app` crie um arquivo `lambda_function.py`
+1.	No seu ambiente do Cloud9, crie uma nova pasta `lab4` e dentro dela uma outra pasta `app`. Dentro da pasta `app` crie um arquivo `lambda_function.py`
 
 2.	Coloque o seguinte código  no arquivo
 
@@ -56,7 +56,7 @@ ${app/lambda_function.py}
 
 4.	Você será redirecionado para a tela da função criada. Agora é preciso configurá-la
 
-    4.1.	Na seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem8.png" height='25'/> remova o conteúdo do arquivo que está aberto e cole o código do arquivo <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a> criado no VSCode.
+    4.1.	Na seção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem8.png" height='25'/> remova o conteúdo do arquivo que está aberto e cole o código do arquivo <a href="https://github.com/fesousa/dataops-lab4/blob/master/app/lambda_function.py" target="_blank">`lambda_function.py` </a> criado no Cloud9 .
 
 
     <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem9.png" width='100%'/>
@@ -87,6 +87,8 @@ ${app/lambda_function.py}
     5.2.	Na caixa de texto onde está a string JSON, troque pelo seguinte, para coletar os dados de vacina do Acre:
 
         OBS: O Link abaixo é dinâmico. Pegue outro link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173
+    
+    
 
     ```json
     {
