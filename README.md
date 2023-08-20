@@ -381,14 +381,14 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 16.  Em `Definition` selecione `Pipeline script from SCM` e configure conforme a imagem abaixo. Troque os seguintes valores pelas suas configurações:
 
-    * `Repository URL`: URL do seu repositório do lab 4
+        * `Repository URL`: URL do seu repositório do lab 4
 
-    * `Credentials`: selecione a credencial criada anteriormente
+        * `Credentials`: selecione a credencial criada anteriormente
 
-    * `Branch Specifier (blank for 'any')`: Coloque a sua branch principal (provavelmente `main`) 
+        * `Branch Specifier (blank for 'any')`: Coloque a sua branch principal (provavelmente `main`) 
 
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem131.png" width='100%'/> 
+        <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem131.png" width='100%'/> 
 
 16. Clique em `Aplicar` e depois em `Salvar`
 
@@ -480,5 +480,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-08-20 00:30:18
+Last update: 2023-08-20 00:31:08
 </div>
