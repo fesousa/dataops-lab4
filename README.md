@@ -396,7 +396,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 1. Volte ao Github e abra seu repositório do Lab4
 
-2. Clique em `Settings > Webhooks`
+2. Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem132.png" height='25'/> no menu superior e depois em  `Webhooks` no menu lateral
 
 3. Clique em `Add webhook` E CONFIGURE O SEGUINTE:
 
@@ -408,14 +408,14 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem124.png" width='100%'/> 
 
-5. Quando voltar a lista de webhooks você deve ver um check ao lado do webhook
+5. Quando voltar a lista de webhooks você deve ver um check ao lado do webhook. Atualize a página caso não veja o check. Se aparecer um alerta, verifique as configurações do webhook.
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem125.png" height='75'/>
 
 
 # Executar pipeline Jenkins
 
-1. No VSCode, crie o arquivo `Jenkinsfile` na pasta `lab4` com o seguinte conteúdo. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
+1. No Cloud9, crie o arquivo `Jenkinsfile` na pasta `lab4` com o seguinte conteúdo. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
 
 ```javascript
 pipeline {
@@ -480,5 +480,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-08-20 00:31:56
+Last update: 2023-08-20 00:40:17
 </div>
