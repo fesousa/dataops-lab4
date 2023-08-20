@@ -431,7 +431,7 @@ pipeline {
     stage('deploy') {
       environment {
         STACK_NAME = 'dataops-coleta-vacinas-stack'
-        S3_BUCKET = 'dataops-deploy-fernandosousa'
+        S3_BUCKET = 'deploy-nomesobrenome-accountID-regiao'
       }
       steps {
         unstash 'venv'        
@@ -454,7 +454,7 @@ pipeline {
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem128.png" height='400'/>
  
-13.	Verifique se a função lambda foi criada
+13.	Verifique se a função lambda `dataops-coleta-vacinas-ci-cd` foi criada
 
 14.	Verifique no serviço EventBridge o evento criado e o horário de execução
 
@@ -480,5 +480,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-08-20 00:40:17
+Last update: 2023-08-20 00:50:31
 </div>
