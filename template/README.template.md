@@ -148,7 +148,7 @@ ${template.yaml}
 
 6.	Na barra superior, clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem28.png" height='25'/>  para abrir um console de linha de comando do AWS CloudShell e espere iniciar
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem29.png" height='350'/> 
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem29.png" height='250'/> 
 
 7.	Faça o upload da chave SSH que acabou de baixar (`labsuser.pem`) para o CloudShell
 
@@ -160,11 +160,11 @@ ${template.yaml}
 
     7.5.	Espere o arquivo ser carregado. Aparecerá a seguinte mensagem no canto inferior direito
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem34.png" height='150'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem34.png" height='120'/>
 
     7.6.	No terminal do CloudShell digite `ls` e verifique a presença do arquivo
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem35.png" height='300'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem35.png" height='180'/>
  
 8.	Ainda no terminal, digite o seguinte comando para mudar a permissão de acesso à chave SSH:
 
@@ -190,7 +190,7 @@ chmod 400 labsuser.pem
 
     9.6.	Se a conexão deu certo, você verá a linha de comando iniciando com `ec2-user`
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem39.png" height='300'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem39.png" height='250'/>
 
 10.	Conectado na instância, precisamos recuperar a senha de administrador do Jenkins
 
@@ -202,7 +202,7 @@ chmod 400 labsuser.pem
 
     10.2.	Copie e guarde o valor alfanumérico que aparecer no terminal
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem40.png" height='300'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem40.png" height='220'/>
 
 11.	Em uma nova aba do navegador, acesse o Jenkins escrevendo `<IP-INSTANCIA>:8080`. Por exemplo: `12.345.6.789:800`. O IP é o mesmo utilizado para conectar na instância pelo terminal
 
