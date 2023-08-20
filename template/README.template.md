@@ -260,15 +260,23 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 1. Volte ao Jenkins. Na página inicial do Jenkins clique em `Gerenciar Jenkins` no menu lateral
 
-2. Clique em `Ferramentas de configuração global`
+2. Clique em `Tools - Configurar ferramentas, suas localizações e instaladores automáticos.`
 
-3. Procure pela seção `Git` e clique no botão `Add Git` e depois em `JGit`
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem129.png" width='40%'/> 
+
+3. Procure pela seção `Git installations` 
+
+    3.1. Remova a opção `Git`, clicando no `X`
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem130.png" width='40%'/> 
+
+    3.2. Clique no botão `Add Git` e depois em `JGit`
 
 4. Clique em `Save`
 
 5. Volte à pagina inicial do jenkins e clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem45.png" height='25'/> no menu lateral
 
-6. Clique em `Manage credentials` 
+6. Clique em `Credentials - Configure credentials ` 
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem109.png" height='75'/> 
 
@@ -298,13 +306,18 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem121.png" width='100%'/> 
 
-15. Aida na mesma tela, procure pela seção `Pipeline` e configure conforme a imagem abaixo. Troque os seguintes valores pelas suas configurações:
+15. Aida na mesma tela, procure pela seção `Pipeline` 
+
+16.  Em `Definition` selecione `Pipeline script from SCM` e configure conforme a imagem abaixo. Troque os seguintes valores pelas suas configurações:
 
     * `Repository URL`: URL do seu repositório do lab 4
 
     * `Credentials`: selecione a credencial criada anteriormente
 
     * `Branch Specifier (blank for 'any')`: Coloque a sua branch principal (provavelmente `main`) 
+
+
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem131.png" width='100%'/> 
 
 16. Clique em `Aplicar` e depois em `Salvar`
 
