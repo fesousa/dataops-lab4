@@ -357,7 +357,7 @@ ${Jenkinsfile}
 
 <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem128.png" height='400'/>
  
-13.	Verifique se a função lambda foi criada
+13.	Verifique se a função lambda `dataops-coleta-vacinas-ci-cd` foi criada
 
 14.	Verifique no serviço EventBridge o evento criado e o horário de execução
 
