@@ -273,7 +273,7 @@ chmod 400 labsuser.pem
 
     10.2.	Copie e guarde o valor alfanumérico que aparecer no terminal
 
-    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem40.png" height='220'/>
+    <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem40.png" height='150'/>
 
 11.	Em uma nova aba do navegador, acesse o Jenkins escrevendo `<IP-INSTANCIA>:8080`. Por exemplo: `12.345.6.789:800`. O IP é o mesmo utilizado para conectar na instância pelo terminal
 
@@ -480,5 +480,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-08-20 00:31:08
+Last update: 2023-08-20 00:31:56
 </div>
