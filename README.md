@@ -56,7 +56,7 @@ def lambda_handler(event, context):
     # url que virá pelo parâmetro
     url = event['url']
     # nome do bucket para upload
-    bucket = 'dataops-impacta-dados-profernandosousa'
+    bucket = 'dataops-dados-nomesobrenome'
     #nome do arquivo que será salvo no bucket
     key = f'input/vacinas_{event["uf"]}.csv'
     #Concexão com s3
@@ -162,7 +162,7 @@ def lambda_handler(event, context):
 
 # Template SAM para a função lambda
 
-1.	No VSCode crie um novo arquivo `template.yaml` na pasta `lab4`
+1.	No Cloud9 crie um novo arquivo `template.yaml` na pasta `lab4`
 
 2.	Coloque o seguinte código no arquivo. Veja os comentários para entender o que cada declaração faz
 
@@ -198,6 +198,8 @@ Resources:
 
 3.	Crie um  repositório `dataops-lab4` no seu GitHub e adicione a pasta lab4 nesse repositório.
 
+    3.1. Veja o <a href="https://github.com/fesousa/dataops-lab3" target="_blank"> Laboratório 3 </a> e o material de aula para lembrar como vincular a pasta no repositório e autenticar no Github
+
 
 ## Configurar Jenkins para fazer CI/CD da função lambda
 
@@ -225,17 +227,13 @@ Resources:
 
     7.2.	Selecione a opção <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem31.png" height='25'/>
 
-    7.3.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem32.png" height='25'/>
+    7.3.	Procure e selecione o arquivo `labsuser.pem` que baixou
 
-    7.4.	Procure o arquivo `labsuser.pem` que baixou
-
-    7.5.	Clique em <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem33.png" height='25'/>
-
-    7.6.	Espere o arquivo ser carregado. Aparecerá a seguinte mensagem no canto superior direito
+    7.5.	Espere o arquivo ser carregado. Aparecerá a seguinte mensagem no canto inferior direito
 
     <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem34.png" height='150'/>
 
-    7.7.	No terminal do CloudShell digite `ls` e verifique a presença do arquivo
+    7.6.	No terminal do CloudShell digite `ls` e verifique a presença do arquivo
 
     <img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem35.png" height='300'/>
  
@@ -469,5 +467,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-08-19 23:35:03
+Last update: 2023-08-20 00:04:39
 </div>
