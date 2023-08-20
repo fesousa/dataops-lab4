@@ -131,7 +131,7 @@ def lambda_handler(event, context):
 
     5.2.	Na caixa de texto onde está a string JSON, troque pelo seguinte, para coletar os dados de vacina do Acre:
 
-    Pegue um link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173. Clique com o botão direito em um dos arquivos do Acre e clique em "Copiar endereço do link". Coloque este link no logar de `LINK` no JSON abaixo.
+    Pegue um link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173. Clique com o botão direito em um dos arquivos do Acre e clique em "Copiar endereço do link". Coloque este link no lugar de `LINK` no JSON abaixo.
     
 
 
@@ -164,7 +164,7 @@ def lambda_handler(event, context):
 
 1.	No Cloud9 crie um novo arquivo `template.yaml` na pasta `lab4`
 
-2.	Coloque o seguinte código no arquivo. Veja os comentários para entender o que cada declaração faz
+2.	Coloque o seguinte código no arquivo. Veja os comentários para entender o que cada declaração faz. Lembre-se de pegar uma nova URL de dados de vacina (como fez para testar a função lambda anteriormente) e substituir em LINK (valor da url no json em Input)
 
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
@@ -190,10 +190,10 @@ Resources:
             Schedule: cron(15 00 * * ? *) # executa todo dia às 10:15
             Name: dataops-agenda-coleta-vacina
             Input: '{
-              "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-ebb720ff-cda9-42f4-90a0-e4c8a15c22aa.c000.csv", 
+              "url":"LINK", 
               "uf":"ac"
             }' # evento com parâmetros que serão enviados para a função lambda
-            #  OBS: O Link abaixo é dinâmico. Pegue outro link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173
+            # OBS: Pegue um link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173. Clique com o botão direito em um dos arquivos do Acre e clique em "Copiar endereço do link". Coloque este link no lugar de LINK (valor da url no JSON acima).
 ```
 
 3.	Crie um  repositório `dataops-lab4` no seu GitHub e adicione a pasta lab4 nesse repositório.
@@ -415,7 +415,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 # Executar pipeline Jenkins
 
-1. No Cloud9, crie o arquivo `Jenkinsfile` na pasta `lab4` com o seguinte conteúdo. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
+1. No Cloud9, crie o arquivo `Jenkinsfile` na pasta `lab4` com o seguinte conteúdo. Na configuração `S3_BUCKET`, troque o valor`dataops-deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
 
 ```javascript
 pipeline {
@@ -431,7 +431,7 @@ pipeline {
     stage('deploy') {
       environment {
         STACK_NAME = 'dataops-coleta-vacinas-stack'
-        S3_BUCKET = 'deploy-nomesobrenome-accountID-regiao'
+        S3_BUCKET = 'dataops-deploy-nomesobrenome-accountID-regiao'
       }
       steps {
         unstash 'venv'        
@@ -480,5 +480,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-08-20 00:50:31
+Last update: 2023-08-20 00:55:37
 </div>
