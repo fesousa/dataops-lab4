@@ -86,7 +86,7 @@ ${app/lambda_function.py}
 
     5.2.	Na caixa de texto onde está a string JSON, troque pelo seguinte, para coletar os dados de vacina do Acre:
 
-    Pegue um link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173. Clique com o botão direito em um dos arquivos do Acre e clique em "Copiar endereço do link". Coloque este link no logar de `LINK` no JSON abaixo.
+    Pegue um link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173. Clique com o botão direito em um dos arquivos do Acre e clique em "Copiar endereço do link". Coloque este link no lugar de `LINK` no JSON abaixo.
     
 
 
@@ -119,7 +119,7 @@ ${app/lambda_function.py}
 
 1.	No Cloud9 crie um novo arquivo `template.yaml` na pasta `lab4`
 
-2.	Coloque o seguinte código no arquivo. Veja os comentários para entender o que cada declaração faz
+2.	Coloque o seguinte código no arquivo. Veja os comentários para entender o que cada declaração faz. Lembre-se de pegar uma nova URL de dados de vacina (como fez para testar a função lambda anteriormente) e substituir em LINK (valor da url no json em Input)
 
 ```yaml
 ${template.yaml}
@@ -344,7 +344,7 @@ Essa é a senha do administrador. Quando acessar o Jenkins novamente, será soli
 
 # Executar pipeline Jenkins
 
-1. No Cloud9, crie o arquivo `Jenkinsfile` na pasta `lab4` com o seguinte conteúdo. Troque `deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
+1. No Cloud9, crie o arquivo `Jenkinsfile` na pasta `lab4` com o seguinte conteúdo. Na configuração `S3_BUCKET`, troque o valor`dataops-deploy-nomesobrenome-accountID-regiao` pelo bucket criado no Laboratório 2
 
 ```javascript
 ${Jenkinsfile}

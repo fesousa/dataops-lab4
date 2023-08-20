@@ -21,7 +21,7 @@ Resources:
             Schedule: cron(15 00 * * ? *) # executa todo dia às 10:15
             Name: dataops-agenda-coleta-vacina
             Input: '{
-              "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAC/part-00000-ebb720ff-cda9-42f4-90a0-e4c8a15c22aa.c000.csv", 
+              "url":"LINK", 
               "uf":"ac"
             }' # evento com parâmetros que serão enviados para a função lambda
-            #  OBS: O Link abaixo é dinâmico. Pegue outro link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173
+            # OBS: Pegue um link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173. Clique com o botão direito em um dos arquivos do Acre e clique em "Copiar endereço do link". Coloque este link no lugar de LINK (valor da url no JSON acima).
