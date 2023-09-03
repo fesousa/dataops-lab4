@@ -16,7 +16,7 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 
 ## Arquitetura da solução
 
-<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/Imagem1.png" width='100%'/>
+<img src="https://raw.github.com/fesousa/dataops-lab4/master/images/lab4.png" width='100%'/>
 
 
 ## Função Lambda para coletar dados
@@ -480,5 +480,5 @@ pipeline {
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-08-20 00:55:37
+Last update: 2023-09-03 13:29:35
 </div>
